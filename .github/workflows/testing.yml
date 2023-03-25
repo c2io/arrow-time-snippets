@@ -20,8 +20,8 @@ jobs:
       - name: Install requirements
         run: poetry install
 
-      - name: Set timezone
-        uses: szenius/set-timezone@v1.1
+      - name: Setup timezone
+        uses: zcong1993/setup-timezone@master
         with:
           timezone: Asia/Shanghai
 
