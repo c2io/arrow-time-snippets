@@ -19,14 +19,11 @@ jobs:
 
       - name: Install requirements
         run: poetry install
-          
+
       - name: Set timezone
         uses: szenius/set-timezone@v1.1
         with:
           timezone: Asia/Shanghai
 
-      - name: testing
-        uses: pavelzw/pytest-action@v2
-        with:
-          custom-pytest: poetry run pytest
-          emoji: false
+      - name: Test
+        run: poetry run pytest -sv tests
